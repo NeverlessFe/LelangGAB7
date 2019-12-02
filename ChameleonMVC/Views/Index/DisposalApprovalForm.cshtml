@@ -1,0 +1,93 @@
+﻿@{
+    ViewBag.Title = "DisposalApprovalForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Approval Form</h2>
+<div class="col-md-12" hidden="hidden">
+    <div class="row">
+        <div class="col-md-2">
+            <p style="margin-bottom: 0px;font-size:medium;">No Disposal</p>
+            <p style="font-style: italic; font-size: x-small">(Disposal Number)</p>
+        </div>
+        <div class="col-md-8">
+            <input type="text" placeholder="Generate By System" id="txtName" name="txtName" style="width:100%" disabled="disabled" value="@ViewBag.Nama">
+        </div>
+    </div>
+    <div class="row" id="divUploadFoto">
+        <div class="col-md-2">
+            <p style="margin-bottom: 0px;font-size:medium;">Form Usulan Aktiva Tetap yang telah ditanda tangani</p>
+            <p style="font-style: italic; font-size: x-small">(Approval Form)</p>
+        </div>
+        <div class="col-md-8">
+            @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <input type="file" name="UploadFoto" id="UploadFoto" />
+
+                <hr />
+
+                <input type="button" value="Upload" id="btnUpload" />
+                <br />
+                <span style="color:green">@ViewBag.Message</span>
+            }
+        </div>
+    </div>
+    <div class="row" style="margin-left:0px;" id="notifUkuranFoto">
+        <p style="color:red;"><b>Notes : Pastikan form yang anda upload telah ditandatangi</b></p>
+    </div>
+    <hr />
+    
+    <div style="margin-left:42%" id="divLoading" hidden="hidden">
+        <img src="~/Content/images/5.gif" />
+    </div>
+
+    @*<div class="row">
+            <div class="col-md-2">
+                <input type="button" id="btnSaveEditProfile" value="Save Profile" />
+            </div>
+        </div>*@
+</div>
+
+<div class="col-md-12">
+    <div class="row">
+        <div class="col-md-2">
+            <p style="margin-bottom: 0px;font-size:medium;">No Disposal</p>
+            <p style="font-style: italic; font-size: x-small">(Disposal Number)</p>
+        </div>
+        <div class="col-md-8">
+            <input type="text" placeholder="Generate By System" id="txtName" name="txtName" style="width:100%" disabled="disabled" value="@ViewBag.Nama">
+        </div>
+    </div>
+    <div class="row" id="divUploadFoto">
+        <div class="col-md-2">
+            <p style="margin-bottom: 0px;font-size:medium;">Form Usulan Aktiva Tetap yang telah ditanda tangani</p>
+            <p style="font-style: italic; font-size: x-small">(Approval Form)</p>
+        </div>
+        <div class="col-md-8">
+            <input id="btnDownloadForm" type="button" value="Download"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <input type="button" id="btnApprove" value="Approve" style="background-color:green;"/>
+            <input type="button" id="btnReject" value="Reject" style="background-color:red;"/>
+        </div>
+        
+    </div>
+    <div class="row" style="margin-left:0px;" id="notifUkuranFoto">
+        @*<p style="color:red;"><b>Notes : Pastikan form yang anda upload telah ditandatangi</b></p>*@
+    </div>
+    <hr />
+
+    <div style="margin-left:42%" id="divLoading" hidden="hidden">
+        <img src="~/Content/images/5.gif" />
+    </div>
+
+    @*<div class="row">
+            <div class="col-md-2">
+                <input type="button" id="btnSaveEditProfile" value="Save Profile" />
+            </div>
+        </div>*@
+</div>
+
+
+

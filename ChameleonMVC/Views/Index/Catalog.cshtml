@@ -1,0 +1,203 @@
+﻿@{
+    ViewBag.Title = "Catalog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card pull-up ecom-card-1 bg-white">
+            @{
+                string[] imgs = {
+                    "~/Content/images/bangkudijual.jpg",
+                    "~/Content/images/komputerdijual.jpg", 
+                    "~/Content/images/sepedadijual.jpg"
+                };
+                
+                string[] Descript = {
+                    "1Set bangku dengan design yang elegant, warna serta bahan kayu dengan kualitas yang luar biasa. Cepat dapatkan sebelum kehabisan, stock terbatas kalau kehabisan dijamin menyesal boss...",
+                    "PC dengan spesifikasi yang luar biasa, dapat multitasking hingga 20 Apps sekaligus, cepat claim sebelum direbut orang lain...",
+                    "Sepeda dengan kemampuan setara dengan sepeda motor, dapat berjalan hingga 60km/h, jangan sampai kehabisan cepat claim..."
+                };
+
+                string[] Harga = {
+                    "5.200.000,00",
+                    "12.500.000,00",
+                    "3.500.000,00"                
+                };
+
+                string[] Judul = {
+                    "1 Set Bangku",
+                    "PC Gaming",
+                    "Sepeda Gunung"
+                };
+
+                int x = 0;
+            }
+
+            <style>
+                .button {
+                    background-color: #4CAF50; /* Green */
+                    border: none;
+                    color: white;
+                    padding: 15px 32px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 16px;
+                    margin: 4px 2px;
+                    cursor: pointer;
+                }
+
+                .button1 {
+                    border-radius: 2px;
+                }
+
+                .button2 {
+                    border-radius: 4px;
+                }
+
+                .button3 {
+                    border-radius: 8px;
+                }
+
+                .button4 {
+                    border-radius: 12px;
+                }
+
+                .button5 {
+                    border-radius: 50%;
+                }
+            </style>
+            <div>
+               
+                <fieldset>
+                  
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+
+                              
+
+                                <div class="modal fade" tabindex="-1" id="loginModal"
+                                     data-keyboard="false" data-backdrop="static">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">
+                                                    ×
+                                                </button>
+                                                <h4 class="modal-title">Close</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <input class="form-control" type="text"
+                                                               placeholder="Login Username" id="inputUserName" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input class="form-control" placeholder="Login Password"
+                                                               type="password" id="inputPassword" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input class="form-control" placeholder="Penawaran"
+                                                               type="password" id="inputPassword" />
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="submit" class="btn btn-primary button button4">Bid</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+
+            </script>
+            <script src="bootstrap/js/bootstrap.min.js"></script>
+
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $("#btnShowModal").click(function () {
+                        $("#loginModal").modal('show');
+                    });
+
+                    $("#btnHideModal").click(function () {
+                        $("#loginModal").modal('hide');
+                    });
+                });
+            </script> 
+            @*------------------------------------------------------------------------------------------*@
+
+            <div class="modal fade" tabindex="-1" id="loginModal"
+                 data-keyboard="false" data-backdrop="static">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">
+                                ×
+                            </button>
+                            <h4 class="modal-title">Input Penawaran</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <input class="form-control" type="text"
+                                           placeholder="Login Username" id="inputUserName" />
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Login Password"
+                                           type="password" id="inputPassword" />
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary button button4">Sign</button>
+                            <button type="button" id="btnHideModal" class="btn btn-primary button button4">
+                                Hide
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            @foreach (var img in imgs)
+            {
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">@Url.Content(Judul[x])</h4>
+                            <h6 class="card-subtitle text-muted">Lelang Online PT Bintang Toedjoe</h6>
+                        </div>
+                            <div class="card-body">
+                                    <img class="" src="@Url.Content(img)" alt="Card image cap" style="width:583px;height:360px;">
+                                    <p class="card-text">
+                                        @Url.Content(Descript[x])
+                                    </p>
+                                    <p class="card-text" style="color:blue;">
+                                        Bid Tertinggi : Rp.@Url.Content(Harga[x])
+                                    </p>
+                                @*<a href="#" class="card-link">Bid Tertinggi : @Url.Content(Harga)</a>*@
+                                @*<a href="#" class="card-link">Another link</a>*@
+                            </div>
+                        <div class="card-footer border-top-blue-grey border-top-lighten-5 text-muted">
+                            <span class="float-left">25 Juni 2019</span>
+                            <span class="float-right">
+                                <button id="btnShowModal" type="button">
+                                    Ajukan Penawaran
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                x = x + 1;
+            }
+         </div>
+    </div>
+</div>

@@ -1,0 +1,303 @@
+﻿@{
+    ViewBag.Title = "DisposalDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html class="loading" lang="en" data-textdirection="ltr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="Chameleon Admin is a modern Bootstrap 4 webapp &amp; admin dashboard html template with a large number of components, elegant design, clean and organized code.">
+    <meta name="keywords" content="admin template, Chameleon admin template, dashboard template, gradient admin template, responsive admin template, webapp, eCommerce dashboard, analytic dashboard">
+    <meta name="author" content="ThemeSelect">
+    <title>Basic Form Elements - Chameleon Admin - Modern Bootstrap 4 WebApp & Dashboard HTML Template + UI Kit</title>
+    <link rel="apple-touch-icon" href="theme-assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="theme-assets/images/ico/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i%7CComfortaa:300,400,700" rel="stylesheet">
+    <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css" rel="stylesheet">
+    <!-- BEGIN VENDOR CSS-->
+    <link rel="stylesheet" type="text/css" href="theme-assets/css/vendors.css">
+    <!-- END VENDOR CSS-->
+    <!-- BEGIN CHAMELEON  CSS-->
+    <link rel="stylesheet" type="text/css" href="theme-assets/css/app-lite.css">
+    <!-- END CHAMELEON  CSS-->
+    <!-- BEGIN Page Level CSS-->
+    <link rel="stylesheet" type="text/css" href="theme-assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="theme-assets/css/core/colors/palette-gradient.css">
+    <!-- END Page Level CSS-->
+    <!-- BEGIN Custom CSS-->
+    <!-- END Custom CSS-->
+</head>
+<body class="vertical-layout vertical-menu 2-columns   menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu" data-color="bg-gradient-x-purple-blue" data-col="2-columns">
+    <!-- fixed-top-->
+    <h2>Disposal Detail</h2>
+    <div class="content-body">
+        <!-- Basic Inputs start -->
+        <section class="basic-inputs">
+            <div class="row match-height">
+                <div class="col-xl-4 col-lg-6 col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Cost Center(LOB)</h4>
+                        </div>
+                        <div class="card-block">
+                            <div class="card-body">
+                                <fieldset class="form-group">
+                                    <textarea class="form-control" id="txtLOB" rows="3" disabled="disabled">3HA03</textarea>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Lokasi</h4>
+                        </div>
+                        <div class="card-block">
+                            <div class="card-body">
+                                <fieldset class="form-group">
+                                    <textarea class="form-control" id="txtLokasi" rows="3" disabled="disabled">Pulomas</textarea>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @*<div class="col-xl-4 col-lg-6 col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Alasan Detail</h4>
+                            </div>
+                            <div class="card-block">
+                                <div class="card-body">
+                                    <fieldset class="form-group">
+                                        <textarea class="form-control" id="basicTextarea" rows="3"></textarea>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>*@
+                <div class="col-xl-4 col-lg-6 col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Butuh Bagian Teknik</h4>
+                        </div>
+                        <div class="card-block">
+                            <div class="card-body">
+                                <fieldset class="form-group">
+                                    <textarea class="form-control" id="txtBagianTeknis" rows="3" disabled="disabled">Ya</textarea>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-6 col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Alasan Detail</h4>
+                        </div>
+                        <div class="card-block">
+                            <div class="card-body">
+                                <fieldset class="form-group">
+                                    <textarea class="form-control" id="txtAlasanDetail" rows="3" disabled="disabled">Sudah tidak digunakan</textarea>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Person In Charge</h4>
+                        </div>
+                        <div class="card-block">
+                            <div class="card-body">
+                                <fieldset class="form-group">
+                                    <textarea class="form-control" id="txtPIC" rows="3" disabled="disabled">Dani Testing</textarea>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-6 col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Open Bid</h4>
+                        </div>
+                        <div class="card-block">
+                            <div class="card-body">
+                                <fieldset class="form-group">
+                                    <textarea class="form-control" id="basicTextarea" rows="3"></textarea>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Type Lelang</h4>
+                        </div>
+                        <div class="card-block">
+                            <div class="card-body">
+                                <fieldset class="form-group">
+                                    <select class="form-control" id="ddlTypeLelang">
+                                        <option>Internal</option>
+                                        <option>External</option>
+                                    </select>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-6 col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Status Lelang</h4>
+                        </div>
+                        <div class="card-block">
+                            <div class="card-body">
+                                <fieldset class="form-group">
+                                    <select class="form-control" id="ddlStatusLelang">
+                                        <option>Open</option>
+                                        <option>Close</option>
+                                        <option>Complete</option>
+                                    </select>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-6 col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Bidder</h4>
+                        </div>
+                        <div class="card-block">
+                            <div class="card-block">
+                                <div class="card-body">
+                                    <fieldset class="form-group">
+                                        <textarea class="form-control" id="txtBidder" rows="3" disabled="disabled">Ignatius Irvin Kurniawan</textarea>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-6 col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Bid Tertinggi</h4>
+                        </div>
+                        <div class="card-block">
+                            <div class="card-block">
+                                <div class="card-body">
+                                    <fieldset class="form-group">
+                                        <textarea class="form-control" id="txtBidTertinggi" rows="3" disabled="disabled">3.500.000,00</textarea>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-6 col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Tanggal Close Bid</h4>
+                        </div>
+                        <div class="card-block">
+                            <div class="card-block">
+                                <div class="card-body">
+                                    <fieldset class="form-group">
+                                        <input type="date" id="deCloseBid" style="width:100%" />
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Bid History</h4>
+                        </div>
+                        <div class="card-block">
+                            <div class="card-block">
+                                <div class="card-body">
+                                    <fieldset class="form-group">
+                                        <input type="button" id="btnHistoryBidding" value="Bid History" />
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Basic Inputs end -->
+        <div class="row">
+            <div class="col-md-2">
+                Nomor Disposal :
+            </div>
+            <div class="col-md-8">
+                <input type="text" placeholder="GenerateBySystem" disabled="disabled" id="txtNoDisposal" value="UP/3HA03/11/19/0001/HO"/>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-8">
+                <input type="button" id="btnDisposal" value="Submit Setting" />
+            </div>
+        </div>
+        <section class="textarea-select">
+
+            <div class="row" style="margin-top:10px;margin-left:1px;">
+                <table id="table_kekurangan" class="display" border="1" style="width:100%;">
+                    <thead style="background-color:#156898;">
+                        <tr>
+                            <th width="25px" style="color:white">No</th>
+                            <th width="250" style="color:white">NamaBarang</th>
+                            <th width="250px" style="color:white">Model</th>
+                            <th width="350px" style="color:white">Nomor Asset</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody_kekurangan">
+                        <tr>
+                            <td>1</td>
+                            <td>Laptop HP I5</td>
+                            <td>XX01 RDX</td>
+                            <td>ATB340142195NOT005</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+
+            
+        </section>
+    </div>
+
+
+    <!-- BEGIN VENDOR JS-->
+    <script src="theme-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
+    <!-- BEGIN VENDOR JS-->
+    <!-- BEGIN PAGE VENDOR JS-->
+    <!-- END PAGE VENDOR JS-->
+    <!-- BEGIN CHAMELEON  JS-->
+    <script src="theme-assets/js/core/app-menu-lite.js" type="text/javascript"></script>
+    <script src="theme-assets/js/core/app-lite.js" type="text/javascript"></script>
+    <!-- END CHAMELEON  JS-->
+    <!-- BEGIN PAGE LEVEL JS-->
+    <script src="theme-assets/vendors/js/forms/tags/form-field.js" type="text/javascript"></script>
+    <!-- END PAGE LEVEL JS-->
+</body>
+</html>
+

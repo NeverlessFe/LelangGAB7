@@ -1,0 +1,6 @@
+E:\Dani IT\ProjectSource\TrainingSource\ChameleonMVC\ChameleonMVC\ChameleonMVC\bin\ChameleonMVC.dll.config
+E:\Dani IT\ProjectSource\TrainingSource\ChameleonMVC\ChameleonMVC\ChameleonMVC\bin\ChameleonMVC.dll
+E:\Dani IT\ProjectSource\TrainingSource\ChameleonMVC\ChameleonMVC\ChameleonMVC\bin\ChameleonMVC.pdb
+E:\Dani IT\ProjectSource\TrainingSource\ChameleonMVC\ChameleonMVC\ChameleonMVC\obj\Release\ChameleonMVC.dll
+E:\Dani IT\ProjectSource\TrainingSource\ChameleonMVC\ChameleonMVC\ChameleonMVC\obj\Release\ChameleonMVC.pdb
+E:\Dani IT\ProjectSource\TrainingSource\ChameleonMVC\ChameleonMVC\ChameleonMVC\obj\Release\ChameleonMVC.csprojResolveAssemblyReference.cache

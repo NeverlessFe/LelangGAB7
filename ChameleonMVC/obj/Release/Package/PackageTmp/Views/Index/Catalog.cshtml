@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Catalog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card pull-up ecom-card-1 bg-white">
+            @{
+                string[] imgs = {
+                    "http://kalbox-b7.bintang7.com:5000/fbdownload/aovwallpaperskud.jpeg?_sid=%22r9awg3TxThZwI1520MSN123500%22&mode=open&dlink=%222f496e7472616e6574706f7274616c2f496e7472616e6574204174746163686d656e742f4c656c616e672f616f7677616c6c7061706572736b75642e6a706567%22&stdhtml=true&SynoToken=J9lpR1rVZMmwA",
+                    "http://kalbox-b7.bintang7.com:5000/fbdownload/approved.jpg?_sid=%22r9awg3TxThZwI1520MSN123500%22&mode=open&dlink=%222f496e7472616e6574706f7274616c2f496e7472616e6574204174746163686d656e742f434151502f617070726f7665642e6a7067%22&stdhtml=true&SynoToken=J9lpR1rVZMmwA",
+                    "~/Content/images/UserLogo.jpg",
+                    "~/Content/images/3.png"
+                };
+            }
+
+            @foreach (var img in imgs)
+            {
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Basic Card</h4>
+                            <h6 class="card-subtitle text-muted">Basic Card With Header & Footer</h6>
+                        </div>
+                        <img class="" src="@Url.Content(img)" alt="Card image cap" style="width:683px;height:368px;">
+                        <div class="card-body">
+                            <p class="card-text">Action Figure dengan pembelian blablablaaa testing untuk dsekripsi yang cukup panjang, balbalbalaaabaalaa
+                            tjiesjgiodsjoaf diosajg iodjsiogajiodgjsiogjioa jdiosjgioj sdiojagidj iogajiodgj jdgsijgiojio jiojiojiogjio jioj</p>
+                            <a href="#" class="card-link">Bid Tertinggi : Rp.26,000,000.00</a>
+                            @*<a href="#" class="card-link">Another link</a>*@
+                        </div>
+                        <div class="card-footer border-top-blue-grey border-top-lighten-5 text-muted">
+                            <span class="float-left">25 Juni 2019</span>
+                            <span class="float-right">
+                                <a href="#" class="card-link">
+                                    Ajukan Penawaran
+                                    <i class="la la-angle-right"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            }
+         </div>
+    </div>
+</div>

@@ -1,0 +1,166 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Home</title>
+
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+
+    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/assets/css/material-design-iconic-font.min.css" rel="stylesheet" />
+    <link href="~/assets/css/animate.css" rel="stylesheet" />
+    <link href="~/assets/css/hamburgers.min.css" rel="stylesheet" />
+    <link href="~/assets/css/animsition.min.css" rel="stylesheet" />
+    <link href="~/assets/css/select2.min.css" rel="stylesheet" />
+    <link href="~/assets/css/daterangepicker.css" rel="stylesheet" />
+    <link href="~/assets/css/util.css" rel="stylesheet" />
+    <link href="~/assets/css/main.css" rel="stylesheet" />
+
+    <script src="~/assets/js/bootstrap.min.js"></script>
+    <script src="~/assets/js/jquery-1.10.2.js"></script>
+    <script src="~/assets/js/respond.js"></script>
+    <script src="~/assets/js/animsition.min.js"></script>
+    <script src="~/assets/js/jquery-3.2.1.min.js"></script>
+    <script src="~/assets/js/popper.js"></script>
+    <script src="~/assets/js/select2.min.js"></script>
+    <script src="~/assets/js/daterangepicker.js"></script>
+    <script src="~/assets/js/moment.min.js"></script>
+    <script src="~/assets/js/countdowntime.js"></script>
+    <script src="~/assets/js/main.js"></script>
+
+    <style type="text/css">
+        .btnLogin {
+            -moz-box-shadow: inset 0px 1px 0px 0px #f5f5f5;
+            -webkit-box-shadow: inset 0px 1px 0px 0px #f5f5f5;
+            box-shadow: inset 0px 1px 0px 0px #f5f5f5;
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #0b4ec2));
+            background: -moz-linear-gradient(top, #ffffff 5%, #0b4ec2 100%);
+            background: -webkit-linear-gradient(top, #ffffff 5%, #0b4ec2 100%);
+            background: -o-linear-gradient(top, #ffffff 5%, #0b4ec2 100%);
+            background: -ms-linear-gradient(top, #ffffff 5%, #0b4ec2 100%);
+            background: linear-gradient(to bottom, #ffffff 5%, #0b4ec2 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#0b4ec2',GradientType=0);
+            background-color: #ffffff;
+            -moz-border-radius: 6px;
+            -webkit-border-radius: 6px;
+            border-radius: 6px;
+            border: 1px solid #fff7ff;
+            display: inline-block;
+            cursor: pointer;
+            color: #140114;
+            font-family: Arial;
+            font-size: 15px;
+            font-weight: bold;
+            padding: 6px 24px;
+            text-decoration: none;
+            text-shadow: 0px 1px 0px #916991;
+        }
+
+            .btnLogin:hover {
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0b4ec2), color-stop(1, #ffffff));
+                background: -moz-linear-gradient(top, #0b4ec2 5%, #ffffff 100%);
+                background: -webkit-linear-gradient(top, #0b4ec2 5%, #ffffff 100%);
+                background: -o-linear-gradient(top, #0b4ec2 5%, #ffffff 100%);
+                background: -ms-linear-gradient(top, #0b4ec2 5%, #ffffff 100%);
+                background: linear-gradient(to bottom, #0b4ec2 5%, #ffffff 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0b4ec2', endColorstr='#ffffff',GradientType=0);
+                background-color: #0b4ec2;
+            }
+
+            .btnLogin:active {
+                position: relative;
+                top: 1px;
+            }
+    </style>
+
+    <script>
+
+    $(document).ready(function () {
+        $('#txtPassword').keypress(function (e) {
+            var key = e.which;
+            if (key == 13)  // the enter key code
+            {
+                $('#btnLogin').click();
+                return false;
+            }
+        });
+    });
+
+    $(document).ready(function () {
+        $("#btnLogin").click(function () {
+            var UsernameGet = $('#txtUsername').val();
+            var PasswordGet = $('#txtPassword').val();
+            var dto = {
+                UserName: UsernameGet, Password: PasswordGet
+            };
+            $('#divLoading').attr("hidden", false);
+            $.ajax({
+                url: "Login",
+                type: "post",
+                data: JSON.stringify(dto),
+                dataType: "json",
+                contentType: "application/json;charset=utf-8",
+                success: function (data) {
+                    $.each(data, function (index, item) {
+                        if (data == 'True') {
+                            window.location.href = "Index";
+                        } else {
+                            alert(data);
+                            $('#divLoading').attr("hidden", true);
+                        }
+                    });
+                },
+                error: function (errormessage) {
+                    alert(errormessage);
+                    $('#divLoading').attr("hidden", hidden);
+                }
+            });
+        });
+    });
+    </script>
+
+</head>
+<body>
+    <div class="limiter">
+        <div class="container-login100" style="background-image:url(../../Content/images/bintang_toedjoe_pt_main_kantorbintangtoedjoe.jpg);">
+            <div class="wrap-login100">
+
+                <form class="login100-form validate-form">
+                    <div style="margin-left:50px;">
+                        <img src="~/Content/Images/LogoB7.png" />
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Enter username">
+                        <input class="input100" type="text" name="username" placeholder="Username" id="txtUsername">
+                        <span class="focus-input100" data-placeholder="&#xf207;"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Enter password">
+                        <input class="input100" type="password" id="txtPassword" name="pass" placeholder="Password">
+                        <span class="focus-input100" data-placeholder="&#xf191;"></span>
+                    </div>
+                </form>
+                <div class="container-login100-form-btn">
+                    <button class="login100-form-btn" id="btnLogin">
+                        Login
+                    </button>
+                </div>
+                <div style="margin-left:42%" id="divLoading" hidden="hidden">
+                    <img src="~/Content/Images/5.gif" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="dropDownSelect1"></div>
+
+
+</body>
+</html>

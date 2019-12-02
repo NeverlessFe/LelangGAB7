@@ -1,0 +1,120 @@
+﻿@{
+    ViewBag.Title = "DisposalApprovalList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<link href="~/assets/css/bootstrap.css" rel="stylesheet" />*@
+
+
+<script>
+    $(document).ready(function () {
+        $("#tblDisposalApprovalList").DataTable();
+    });
+</script>
+
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="container">
+        <div id="divCAPAList">
+            <h1>List Disposal</h1>
+            <div class="row">
+                <div class="col-md-12">
+                    <table id="tblDisposalApprovalList" class="display" border="1">
+                        <thead style="background-color:#156898;">
+                            <tr>
+                                <th width="25px" style="color:white;">No</th>
+                                <th width="100px" style="color:white;">No Disposal</th>
+                                <th width="200px" style="color:white">Nama Barang</th>
+                                <th width="100px" style="color:white">Lokasi CAPA</th>
+                                <th width="200px" style="color:white">Alasan Lelang</th>
+                                <th width="100px" style="color:white">Status Approval</th>
+                                <th width="100px" style="color:white">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    1
+                                </td>
+                                <td>
+                                    UP/3HA03/11/19/0001/HO
+                                </td>
+                                <td>
+                                    Laptop HP Core I5
+                                </td>
+                                <td>
+                                    Head Office
+                                </td>
+                                <td>
+                                    Sudah tidak digunakan
+                                </td>
+                                <td style="background-color:#70CB98;color:white;">
+                                    <b>Approved</b>
+                                </td>
+                                <td>
+                                    <button id="btnDetail">Detail</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    2
+                                </td>
+                                <td>
+                                    UP/3HA03/11/19/0002/HO
+                                </td>
+                                <td>
+                                    Printer HP Laser Jet 3310
+                                </td>
+                                <td>
+                                    Head Office
+                                </td>
+                                <td>
+                                    Sudah tidak digunakan
+                                </td>
+                                <td style="background-color:#56BACF;color:white;">
+                                    <b>Wait for Approval</b>
+                                </td>
+                                <td>
+                                    <button id="btnDetail">Detail</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    3
+                                </td>
+                                <td>
+                                    UP/3HA03/11/19/0003/HO
+                                </td>
+                                <td>
+                                    Monitor HP 17'
+                                </td>
+                                <td>
+                                    Head Office
+                                </td>
+                                <td>
+                                    Sudah tidak digunakan
+                                </td>
+                                <td style="background-color:#ff0000;color:black;">
+                                    <b>Rejected</b>
+                                </td>
+                                <td>
+                                    <button id="btnDetail">Detail</button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+        <br />
+    </div>
+    <header class="main-header">
+        <nav class="navbar navbar-static-top">
+
+        </nav>
+    </header>
+
+</body>
