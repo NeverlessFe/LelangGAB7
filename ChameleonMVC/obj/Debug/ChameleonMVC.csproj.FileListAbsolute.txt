@@ -34,3 +34,33 @@ E:\Dani IT\ProjectSource\LelangGA\ChameleonMVC\ChameleonMVC\ChameleonMVC\bin\Sys
 E:\Dani IT\ProjectSource\LelangGA\ChameleonMVC\ChameleonMVC\ChameleonMVC\obj\Debug\ChameleonMVC.csprojAssemblyReference.cache
 E:\Dani IT\ProjectSource\LelangGA\ChameleonMVC\ChameleonMVC\ChameleonMVC\obj\Debug\ChameleonMVC.csproj.CoreCompileInputs.cache
 E:\Dani IT\ProjectSource\LelangGA\ChameleonMVC\ChameleonMVC\ChameleonMVC\obj\Debug\ChameleonMVC.csproj.CopyComplete
+C:\Users\ignatius.kurniawan\Source\Repos\LelangGAB7\ChameleonMVC\bin\ChameleonMVC.dll.config
+C:\Users\ignatius.kurniawan\Source\Repos\LelangGAB7\ChameleonMVC\bin\ChameleonMVC.dll
+C:\Users\ignatius.kurniawan\Source\Repos\LelangGAB7\ChameleonMVC\bin\ChameleonMVC.pdb
+C:\Users\ignatius.kurniawan\Source\Repos\LelangGAB7\ChameleonMVC\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\ignatius.kurniawan\Source\Repos\LelangGAB7\ChameleonMVC\bin\CrystalDecisions.ReportSource.dll
+C:\Users\ignatius.kurniawan\Source\Repos\LelangGAB7\ChameleonMVC\bin\CrystalDecisions.Shared.dll
+C:\Users\ignatius.kurniawan\Source\Repos\LelangGAB7\ChameleonMVC\bin\System.Net.Http.Formatting.dll
+C:\Users\ignatius.kurniawan\Source\Repos\LelangGAB7\ChameleonMVC\bin\System.Web.Http.dll
+C:\Users\ignatius.kurniawan\Source\Repos\LelangGAB7\ChameleonMVC\bin\System.Web.Http.WebHost.dll
+C:\Users\ignatius.kurniawan\Source\Repos\LelangGAB7\ChameleonMVC\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\ignatius.kurniawan\Source\Repos\LelangGAB7\ChameleonMVC\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\ignatius.kurniawan\Source\Repos\LelangGAB7\ChameleonMVC\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\ignatius.kurniawan\Source\Repos\LelangGAB7\ChameleonMVC\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\ignatius.kurniawan\Source\Repos\LelangGAB7\ChameleonMVC\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\ignatius.kurniawan\Source\Repos\LelangGAB7\ChameleonMVC\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\ignatius.kurniawan\Source\Repos\LelangGAB7\ChameleonMVC\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\ignatius.kurniawan\Source\Repos\LelangGAB7\ChameleonMVC\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\ignatius.kurniawan\Source\Repos\LelangGAB7\ChameleonMVC\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\ignatius.kurniawan\Source\Repos\LelangGAB7\ChameleonMVC\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\ignatius.kurniawan\Source\Repos\LelangGAB7\ChameleonMVC\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\ignatius.kurniawan\Source\Repos\LelangGAB7\ChameleonMVC\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\ignatius.kurniawan\Source\Repos\LelangGAB7\ChameleonMVC\bin\stdole.dll
+C:\Users\ignatius.kurniawan\Source\Repos\LelangGAB7\ChameleonMVC\bin\System.Net.Http.Formatting.xml
+C:\Users\ignatius.kurniawan\Source\Repos\LelangGAB7\ChameleonMVC\bin\System.Web.Http.xml
+C:\Users\ignatius.kurniawan\Source\Repos\LelangGAB7\ChameleonMVC\bin\System.Web.Http.WebHost.xml
+C:\Users\ignatius.kurniawan\Source\Repos\LelangGAB7\ChameleonMVC\obj\Debug\ChameleonMVC.csprojAssemblyReference.cache
+C:\Users\ignatius.kurniawan\Source\Repos\LelangGAB7\ChameleonMVC\obj\Debug\ChameleonMVC.csproj.CoreCompileInputs.cache
+C:\Users\ignatius.kurniawan\Source\Repos\LelangGAB7\ChameleonMVC\obj\Debug\ChameleonMVC.csproj.CopyComplete
+C:\Users\ignatius.kurniawan\Source\Repos\LelangGAB7\ChameleonMVC\obj\Debug\ChameleonMVC.dll
+C:\Users\ignatius.kurniawan\Source\Repos\LelangGAB7\ChameleonMVC\obj\Debug\ChameleonMVC.pdb
