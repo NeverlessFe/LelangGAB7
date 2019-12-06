@@ -34,3 +34,6 @@ E:\Dani IT\ProjectSource\LelangGA\ChameleonMVC\ChameleonMVC\ChameleonMVC\bin\Sys
 E:\Dani IT\ProjectSource\LelangGA\ChameleonMVC\ChameleonMVC\ChameleonMVC\obj\Debug\ChameleonMVC.csprojAssemblyReference.cache
 E:\Dani IT\ProjectSource\LelangGA\ChameleonMVC\ChameleonMVC\ChameleonMVC\obj\Debug\ChameleonMVC.csproj.CoreCompileInputs.cache
 E:\Dani IT\ProjectSource\LelangGA\ChameleonMVC\ChameleonMVC\ChameleonMVC\obj\Debug\ChameleonMVC.csproj.CopyComplete
+E:\Dani IT\ProjectSource\LelangGA\ChameleonMVC\ChameleonMVC\ChameleonMVC\bin\Oracle.DataAccess.dll
+E:\Dani IT\ProjectSource\LelangGA\ChameleonMVC\ChameleonMVC\ChameleonMVC\bin\Oracle.ManagedDataAccess.dll
+E:\Dani IT\ProjectSource\LelangGA\ChameleonMVC\ChameleonMVC\ChameleonMVC\bin\Oracle.Web.dll
