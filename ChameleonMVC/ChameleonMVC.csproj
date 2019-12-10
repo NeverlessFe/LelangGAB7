@@ -140,6 +140,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DisposalCreatorModel.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
@@ -158,6 +159,7 @@
     <Content Include="assets\css\AdminLTE.min.css" />
     <Content Include="assets\css\animate.css" />
     <Content Include="assets\css\animsition.min.css" />
+    <Content Include="assets\css\app-lite.css" />
     <Content Include="assets\css\bootstrap-grid.css" />
     <Content Include="assets\css\bootstrap-grid.min.css" />
     <Content Include="assets\css\bootstrap-reboot.css" />
@@ -177,13 +179,19 @@
     <Content Include="assets\css\jquery.dataTables.min.css" />
     <Content Include="assets\css\main.css" />
     <Content Include="assets\css\material-design-iconic-font.min.css" />
+    <Content Include="assets\css\palette-gradient.css" />
     <Content Include="assets\css\select2.min.css" />
     <Content Include="assets\css\style-rtl.css" />
     <Content Include="assets\css\style.css" />
     <Content Include="assets\css\util.css" />
+    <Content Include="assets\css\vendors.css" />
+    <Content Include="assets\css\vertical-menu.css" />
+    <Content Include="assets\css\vertical-overlay-menu.css" />
     <Content Include="assets\css\_all-skins.min.css" />
     <Content Include="assets\fonts\Material-Design-Iconic-Font.svg" />
     <Content Include="assets\js\animsition.min.js" />
+    <Content Include="assets\js\app-lite.js" />
+    <Content Include="assets\js\app-menu-lite.js" />
     <Content Include="assets\js\bootstrap.bundle.js" />
     <Content Include="assets\js\bootstrap.bundle.min.js" />
     <Content Include="assets\js\bootstrap.js" />
@@ -194,6 +202,7 @@
     <Content Include="assets\js\daterangepicker.js" />
     <Content Include="assets\js\demo.js" />
     <Content Include="assets\js\fastclick.js" />
+    <Content Include="assets\js\form-field.js" />
     <Content Include="assets\js\jquery-1.10.2.js" />
     <Content Include="assets\js\jquery-3.2.1.min.js" />
     <Content Include="assets\js\jquery-jvectormap-1.2.2.min.js" />
@@ -207,6 +216,7 @@
     <Content Include="assets\js\respond.js" />
     <Content Include="assets\js\scripts.js" />
     <Content Include="assets\js\select2.min.js" />
+    <Content Include="assets\js\vendors.min.js" />
     <Content Include="bin\Antlr3.Runtime.dll" />
     <Content Include="bin\EntityFramework.dll" />
     <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
@@ -2741,7 +2751,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
     <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="obj\Release\Package\PackageTmp\obj\Debug\" />
     <Folder Include="obj\Release\Package\PackageTmp\src\js\core\libraries\" />
