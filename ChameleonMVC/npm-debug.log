@@ -41,57 +41,57 @@
 38 silly mapToRegistry uri https://registry.npmjs.org/gulp-cli
 39 verbose request uri https://registry.npmjs.org/async
 40 verbose request no auth needed
-41 info attempt registry request try #1 at 8:48:43 AM
-42 verbose request id 9f237261d45a92ac
+41 info attempt registry request try #1 at 9:29:55 AM
+42 verbose request id 858e650a3533e785
 43 http request GET https://registry.npmjs.org/async
-44 verbose request uri https://registry.npmjs.org/grunt-cli
+44 verbose request uri https://registry.npmjs.org/grunt
 45 verbose request no auth needed
-46 info attempt registry request try #1 at 8:48:43 AM
-47 http request GET https://registry.npmjs.org/grunt-cli
-48 verbose request uri https://registry.npmjs.org/grunt
+46 info attempt registry request try #1 at 9:29:55 AM
+47 http request GET https://registry.npmjs.org/grunt
+48 verbose request uri https://registry.npmjs.org/grunt-cli
 49 verbose request no auth needed
-50 info attempt registry request try #1 at 8:48:43 AM
-51 http request GET https://registry.npmjs.org/grunt
+50 info attempt registry request try #1 at 9:29:55 AM
+51 http request GET https://registry.npmjs.org/grunt-cli
 52 verbose request uri https://registry.npmjs.org/gulp-cli
 53 verbose request no auth needed
-54 info attempt registry request try #1 at 8:48:43 AM
+54 info attempt registry request try #1 at 9:29:56 AM
 55 http request GET https://registry.npmjs.org/gulp-cli
 56 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=Parse Error
 57 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=Parse Error
 58 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=Parse Error
 59 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=Parse Error
-60 info attempt registry request try #2 at 8:48:53 AM
+60 info attempt registry request try #2 at 9:30:06 AM
 61 http request GET https://registry.npmjs.org/async
-62 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=Parse Error
-63 info attempt registry request try #2 at 8:48:53 AM
-64 http request GET https://registry.npmjs.org/gulp-cli
-65 info attempt registry request try #2 at 8:48:53 AM
-66 http request GET https://registry.npmjs.org/grunt
-67 info attempt registry request try #2 at 8:48:53 AM
-68 http request GET https://registry.npmjs.org/grunt-cli
+62 info attempt registry request try #2 at 9:30:06 AM
+63 http request GET https://registry.npmjs.org/gulp-cli
+64 info attempt registry request try #2 at 9:30:06 AM
+65 http request GET https://registry.npmjs.org/grunt
+66 info attempt registry request try #2 at 9:30:06 AM
+67 http request GET https://registry.npmjs.org/grunt-cli
+68 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=Parse Error
 69 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=Parse Error
 70 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=Parse Error
 71 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=Parse Error
-72 info attempt registry request try #3 at 8:49:53 AM
+72 info attempt registry request try #3 at 9:31:06 AM
 73 http request GET https://registry.npmjs.org/async
-74 silly fetchPackageMetaData Error: tunneling socket could not be established, cause=Parse Error
-74 silly fetchPackageMetaData     at ClientRequest.onError (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Web\External\node_modules\request\node_modules\tunnel-agent\index.js:176:17)
-74 silly fetchPackageMetaData     at ClientRequest.g (events.js:260:16)
-74 silly fetchPackageMetaData     at emitOne (events.js:77:13)
-74 silly fetchPackageMetaData     at ClientRequest.emit (events.js:169:7)
-74 silly fetchPackageMetaData     at Socket.socketOnData (_http_client.js:320:9)
-74 silly fetchPackageMetaData     at emitOne (events.js:77:13)
-74 silly fetchPackageMetaData     at Socket.emit (events.js:169:7)
-74 silly fetchPackageMetaData     at readableAddChunk (_stream_readable.js:146:16)
-74 silly fetchPackageMetaData     at Socket.Readable.push (_stream_readable.js:110:10)
-74 silly fetchPackageMetaData     at TCP.onread (net.js:523:20)
-74 silly fetchPackageMetaData  error for async@^2.5.0 { [Error: tunneling socket could not be established, cause=Parse Error] code: 'ECONNRESET' }
-75 info attempt registry request try #3 at 8:49:53 AM
-76 http request GET https://registry.npmjs.org/grunt-cli
-77 info attempt registry request try #3 at 8:49:53 AM
-78 http request GET https://registry.npmjs.org/gulp-cli
-79 info attempt registry request try #3 at 8:49:53 AM
-80 http request GET https://registry.npmjs.org/grunt
+74 info attempt registry request try #3 at 9:31:06 AM
+75 http request GET https://registry.npmjs.org/gulp-cli
+76 info attempt registry request try #3 at 9:31:06 AM
+77 http request GET https://registry.npmjs.org/grunt
+78 info attempt registry request try #3 at 9:31:06 AM
+79 http request GET https://registry.npmjs.org/grunt-cli
+80 silly fetchPackageMetaData Error: tunneling socket could not be established, cause=Parse Error
+80 silly fetchPackageMetaData     at ClientRequest.onError (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Web\External\node_modules\request\node_modules\tunnel-agent\index.js:176:17)
+80 silly fetchPackageMetaData     at ClientRequest.g (events.js:260:16)
+80 silly fetchPackageMetaData     at emitOne (events.js:77:13)
+80 silly fetchPackageMetaData     at ClientRequest.emit (events.js:169:7)
+80 silly fetchPackageMetaData     at Socket.socketOnData (_http_client.js:320:9)
+80 silly fetchPackageMetaData     at emitOne (events.js:77:13)
+80 silly fetchPackageMetaData     at Socket.emit (events.js:169:7)
+80 silly fetchPackageMetaData     at readableAddChunk (_stream_readable.js:146:16)
+80 silly fetchPackageMetaData     at Socket.Readable.push (_stream_readable.js:110:10)
+80 silly fetchPackageMetaData     at TCP.onread (net.js:523:20)
+80 silly fetchPackageMetaData  error for async@^2.5.0 { [Error: tunneling socket could not be established, cause=Parse Error] code: 'ECONNRESET' }
 81 silly fetchPackageMetaData Error: tunneling socket could not be established, cause=Parse Error
 81 silly fetchPackageMetaData     at ClientRequest.onError (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Web\External\node_modules\request\node_modules\tunnel-agent\index.js:176:17)
 81 silly fetchPackageMetaData     at ClientRequest.g (events.js:260:16)
@@ -103,7 +103,7 @@
 81 silly fetchPackageMetaData     at readableAddChunk (_stream_readable.js:146:16)
 81 silly fetchPackageMetaData     at Socket.Readable.push (_stream_readable.js:110:10)
 81 silly fetchPackageMetaData     at TCP.onread (net.js:523:20)
-81 silly fetchPackageMetaData  error for grunt-cli@^1.2.0 { [Error: tunneling socket could not be established, cause=Parse Error] code: 'ECONNRESET' }
+81 silly fetchPackageMetaData  error for gulp-cli@^1.4.0 { [Error: tunneling socket could not be established, cause=Parse Error] code: 'ECONNRESET' }
 82 silly fetchPackageMetaData Error: tunneling socket could not be established, cause=Parse Error
 82 silly fetchPackageMetaData     at ClientRequest.onError (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Web\External\node_modules\request\node_modules\tunnel-agent\index.js:176:17)
 82 silly fetchPackageMetaData     at ClientRequest.g (events.js:260:16)
@@ -127,7 +127,7 @@
 83 silly fetchPackageMetaData     at readableAddChunk (_stream_readable.js:146:16)
 83 silly fetchPackageMetaData     at Socket.Readable.push (_stream_readable.js:110:10)
 83 silly fetchPackageMetaData     at TCP.onread (net.js:523:20)
-83 silly fetchPackageMetaData  error for gulp-cli@^1.4.0 { [Error: tunneling socket could not be established, cause=Parse Error] code: 'ECONNRESET' }
+83 silly fetchPackageMetaData  error for grunt-cli@^1.2.0 { [Error: tunneling socket could not be established, cause=Parse Error] code: 'ECONNRESET' }
 84 silly rollbackFailedOptional Starting
 85 silly rollbackFailedOptional Finishing
 86 silly runTopLevelLifecycles Starting
