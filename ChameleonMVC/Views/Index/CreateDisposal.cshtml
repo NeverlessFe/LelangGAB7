@@ -54,15 +54,60 @@
         }
 
         $(document).ready(function () {
+            $("#btnAsset").click(function () {
+                var AssetNumberSend = $("#txtAssetNumb").val();
+                var NoDisposalSend = $("#txtNoDisposal").val();
+                if (AssetNumberSend == '' || AssetNumberSend == null) {
+                    alert('Generate Nomor Disposal Terlebih dahulu');
+                    return;
+                } 
+                var dto = {
+                    AssetNumber: AssetNumberSend, NoDisposal: NoDisposalSend
+                };
+
+                $.ajax({
+                    url: "AddAssetItem",
+                    type: "post",
+                    dataType: "json",
+                    data: JSON.stringify(dto),
+                    contentType: "application/json;charset=utf-8",
+                    success: function (data) {
+                        SetAssetDataIntoTable();
+                    }
+                });
+            });
+        });
+
+        function SetAssetDataIntoTable() {
+            var NoDisposalSend = $("#txtNoDisposal").val();
+            var dto = {
+               NoDisposal: NoDisposalSend
+            };
+
+            $.ajax({
+                url: "SetAssetDataIntoTable",
+                type: "post",
+                dataType: "json",
+                data: JSON.stringify(dto),
+                contentType: "application/json;charset=utf-8",
+                success: function (data) {
+                    
+                  
+                }
+            });
+        }
+
+        $(document).ready(function () {
             $("#btnGenerateNoDisp").click(function () {
                 var CostCenterSend = $("#ddlLOB").val();
                 var LokasiSend = $("#ddlLokasi").val();
                 var BagianTeknikSend = $("#ddlBagianTeknik").val();
                 var AlasanSend = $("#txtAlasan").val();
                 var PICSend = $("#txtPIC").val();
-                
+                var RuangSend = $("#txtRuang").val();
+
                 var dto = {
-                    CostCenter: CostCenterSend, Lokasi: LokasiSend, BagianTeknik: BagianTeknikSend, Alasan: AlasanSend, PIC: PICSend 
+                    CostCenter: CostCenterSend, Lokasi: LokasiSend, BagianTeknik: BagianTeknikSend, Alasan: AlasanSend, PIC: PICSend, Ruang: RuangSend
                 };
 
                 $.ajax({
@@ -72,7 +117,8 @@
                     data: JSON.stringify(dto),
                     contentType: "application/json;charset=utf-8",
                     success: function (data) {
-                        
+                        $("#txtNoDisposal").val(data);
+                        $("#btnGenerateNoDisp").attr("disabled", true); 
                     }
                 });
             });
@@ -119,19 +165,19 @@
                     </div>
                 </div>
                 @*<div class="col-xl-4 col-lg-6 col-md-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">Alasan Detail</h4>
-                            </div>
-                            <div class="card-block">
-                                <div class="card-body">
-                                    <fieldset class="form-group">
-                                        <textarea class="form-control" id="basicTextarea" rows="3"></textarea>
-                                    </fieldset>
-                                </div>
-                            </div>
-                        </div>
-                    </div>*@
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Alasan Detail</h4>
+                </div>
+                <div class="card-block">
+                    <div class="card-body">
+                        <fieldset class="form-group">
+                            <textarea class="form-control" id="basicTextarea" rows="3"></textarea>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>*@
                 <div class="col-xl-4 col-lg-6 col-md-12">
                     <div class="card">
                         <div class="card-header">
@@ -173,6 +219,20 @@
                             <div class="card-body">
                                 <fieldset class="form-group">
                                     <textarea class="form-control" id="txtPIC" rows="3"></textarea>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Ruang</h4>
+                        </div>
+                        <div class="card-block">
+                            <div class="card-body">
+                                <fieldset class="form-group">
+                                    <textarea class="form-control" id="txtRuang" rows="3"></textarea>
                                 </fieldset>
                             </div>
                         </div>

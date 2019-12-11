@@ -104,6 +104,90 @@ namespace ChameleonMVC.Controllers
             return Json(ModelData);
         }
 
+        public ActionResult AddAssetItem(AssetAdd Model)
+        {
+            List<string> ModelData = new List<string>();
+            ConnectionStringSettings mySetting = ConfigurationManager.ConnectionStrings["LelangGA"];
+            string conString = mySetting.ConnectionString;
+            string query = "exec [dbo].[STP_CreateDisposal_Transc]";
+            string Result;
+            DataTable dt = new DataTable();
+
+            SqlConnection conn = new SqlConnection(conString);
+            SqlCommand cmd = new SqlCommand(query, conn);
+            conn.Open();
+            using (SqlCommand command = new SqlCommand("[dbo].[STP_CreateDisposal_Transc]", conn))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Add("@Option", System.Data.SqlDbType.Int);
+                command.Parameters["@Option"].Value = 2;
+
+                command.Parameters.Add("@AssetNumberGet", System.Data.SqlDbType.NVarChar);
+                command.Parameters["@AssetNumberGet"].Value = Model.AssetNumber;
+
+                command.Parameters.Add("@NoDisposalGet", System.Data.SqlDbType.NVarChar);
+                command.Parameters["@NoDisposalGet"].Value = Model.NoDisposal;
+
+                command.Parameters.Add("@UsernameGet", System.Data.SqlDbType.NVarChar);
+                command.Parameters["@UsernameGet"].Value = "Admin";
+
+                SqlDataAdapter dataAdapt = new SqlDataAdapter();
+                dataAdapt.SelectCommand = command;
+
+                dataAdapt.Fill(dt);
+            }
+            conn.Close();
+            
+            List<DataRow> DataRow = new List<DataRow>();
+            int n = 0;
+            foreach (DataRow dr in dt.Rows)
+            {
+                ModelData.Add(dr[0].ToString());
+            }
+            
+            return Json(ModelData);
+        }
+
+        public ActionResult SetAssetDataIntoTable(AssetAdd Model)
+        {
+            List<string> ModelData = new List<string>();
+
+            ConnectionStringSettings mySetting = ConfigurationManager.ConnectionStrings["LelangGA"];
+            string conString = mySetting.ConnectionString;
+            string query = "exec [dbo].[STP_CreateDisposal_Transc]";
+            string Result;
+            DataTable dt = new DataTable();
+
+            SqlConnection conn = new SqlConnection(conString);
+            SqlCommand cmd = new SqlCommand(query, conn);
+            conn.Open();
+            using (SqlCommand command = new SqlCommand("[dbo].[STP_CreateDisposal_Transc]", conn))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Add("@Option", System.Data.SqlDbType.Int);
+                command.Parameters["@Option"].Value = 3;
+
+                command.Parameters.Add("@NoDisposalGet", System.Data.SqlDbType.NVarChar);
+                command.Parameters["@NoDisposalGet"].Value = Model.NoDisposal;
+
+                SqlDataAdapter dataAdapt = new SqlDataAdapter();
+                dataAdapt.SelectCommand = command;
+
+                dataAdapt.Fill(dt);
+            }
+            conn.Close();
+
+            List<DataRow> DataRow = new List<DataRow>();
+            int n = 0;
+            foreach (DataRow dr in dt.Rows)
+            {
+                ModelData.Add(dr[0].ToString());
+            }
+
+
+            return Json(ModelData);
+        }
+
         public ActionResult GenerateDisposalNumber(GenerateDisposal Model)
         {
             List<string> ModelData = new List<string>();
@@ -133,6 +217,9 @@ namespace ChameleonMVC.Controllers
                 command.Parameters.Add("@AlasanLelangGet", System.Data.SqlDbType.NVarChar);
                 command.Parameters["@AlasanLelangGet"].Value = Model.Alasan;
 
+                command.Parameters.Add("@RuangGet", System.Data.SqlDbType.NVarChar);
+                command.Parameters["@RuangGet"].Value = Model.Ruang;
+
                 command.Parameters.Add("@UsernameGet", System.Data.SqlDbType.NVarChar);
                 command.Parameters["@UsernameGet"].Value = "Admin";
 
@@ -140,6 +227,7 @@ namespace ChameleonMVC.Controllers
 
             }
             conn.Close();
+            ModelData.Add(Result);
             return Json(ModelData);
         }
     }

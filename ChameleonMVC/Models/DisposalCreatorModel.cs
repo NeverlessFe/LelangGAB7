@@ -15,5 +15,12 @@ namespace ChameleonMVC.Models
         public string BagianTeknik { get; set; }
         public string Alasan { get; set; }
         public string PIC { get; set; }
+        public string Ruang { get; set; }
+    }
+
+    public class AssetAdd
+    {
+        public string AssetNumber { get; set; }
+        public string NoDisposal { get; set; }
     }
 }
