@@ -91,8 +91,15 @@
                 data: JSON.stringify(dto),
                 contentType: "application/json;charset=utf-8",
                 success: function (data) {
-                    
-                  
+                    var trHTML = '';
+                    var trav = 0;
+                    var Count = data.length;
+                    for (trav = 0; trav < Count; trav++) {
+                        trHTML += '<tr><td>' + data[trav].No + '</td><td>' + data[trav].NamaBarang + '</td><td>' + data[trav].CodeBarang + '</td><td>' + data[trav].NomorAktivaTetap + '</td><td><button id="btnDelete" onclick="DeleteAsset(this)" class=" btn btn-primary a-btn-slide-text"><span><strong>Delete</strong></span></button></td></tr>';
+                    }
+
+                    $("#tbodyAssetBody").empty();
+                    $("#tblAsset").append(trHTML);
                 }
             });
         }
@@ -118,15 +125,51 @@
                     contentType: "application/json;charset=utf-8",
                     success: function (data) {
                         $("#txtNoDisposal").val(data);
-                        $("#btnGenerateNoDisp").attr("disabled", true); 
+                        $("#btnGenerateNoDisp").attr("disabled", true);
+                        $("#btnDisposal").attr("disabled", false);
                     }
                 });
             });
         });
+
+        function DeleteAsset(button) {
+            var row = $(button).closest("TR");
+            var NomorAktivaTetapSend = $("TD", row).eq(3).html();
+            var NoDisposalSend = $("#txtNoDisposal").val();
+            var dto = {
+                NomorAktivaTetap: NomorAktivaTetapSend, NoDisposal: NoDisposalSend
+            };
+            
+            $.ajax({
+                url: "DeleteAsset",
+                type: "post",
+                data: JSON.stringify(dto),
+                dataType: "json",
+                contentType: "application/json;charset=utf-8",
+                success: function (data) {
+                    var trHTML = '';
+                    var trav = 0;
+                    var Count = data.length;
+                    for (trav = 0; trav < Count; trav++) {
+                        trHTML += '<tr><td>' + data[trav].No + '</td><td>' + data[trav].NamaBarang + '</td><td>' + data[trav].CodeBarang + '</td><td>' + data[trav].NomorAktivaTetap + '</td><td><button id="btnDelete" onclick="DeleteAsset(this)" class=" btn btn-primary a-btn-slide-text"><span><strong>Delete</strong></span></button></td></tr>';
+                    }
+
+                    $("#tbodyAssetBody").empty();
+                    $("#tblAsset").append(trHTML);
+                },
+                error: function (errormessage) {
+
+                }
+            });
+        };
     </script>
 </head>
 <body class="vertical-layout vertical-menu 2-columns   menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu" data-color="bg-gradient-x-purple-blue" data-col="2-columns">
     <!-- fixed-top-->
+    <div id="hiddenField" hidden="hidden">
+        <input id="txtNoDisposalParam" value=@ViewBag.NoDisposal />
+        <input id="txtStatusParam" value=@ViewBag.Status />
+    </div>
     <h2>Create Disposal</h2>
     <div class="content-body">
         <!-- Basic Inputs start -->
@@ -165,19 +208,19 @@
                     </div>
                 </div>
                 @*<div class="col-xl-4 col-lg-6 col-md-12">
-            <div class="card">
-                <div class="card-header">
-                    <h4 class="card-title">Alasan Detail</h4>
-                </div>
-                <div class="card-block">
-                    <div class="card-body">
-                        <fieldset class="form-group">
-                            <textarea class="form-control" id="basicTextarea" rows="3"></textarea>
-                        </fieldset>
-                    </div>
-                </div>
-            </div>
-        </div>*@
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Alasan Detail</h4>
+                            </div>
+                            <div class="card-block">
+                                <div class="card-body">
+                                    <fieldset class="form-group">
+                                        <textarea class="form-control" id="basicTextarea" rows="3"></textarea>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>*@
                 <div class="col-xl-4 col-lg-6 col-md-12">
                     <div class="card">
                         <div class="card-header">
@@ -259,7 +302,7 @@
             <br />
 
             <div class="row" style="margin-top:10px;margin-left:1px;">
-                <table id="table_kekurangan" class="display" border="1" style="width:100%;">
+                <table id="tblAsset" class="display" border="1" style="width:100%;">
                     <thead style="background-color:#156898;">
                         <tr>
                             <th width="25px" style="color:white">No</th>
@@ -269,7 +312,7 @@
                             <th width="50px" style="color:white">Delete</th>
                         </tr>
                     </thead>
-                    <tbody id="tbody_kekurangan">
+                    <tbody id="tbodyAssetBody">
                         @*@{Html.RenderPartial("_ApprovalGridViewPageLoad");}*@
                     </tbody>
                 </table>
@@ -288,7 +331,7 @@
             <br />
             <div class="row">
                 <div class="col-md-8">
-                    <input type="button" id="btnDisposal" value="Save Disposal" />
+                    <input type="button" id="btnDisposal" value="Save Disposal" disabled="disabled" />
                 </div>
             </div>
             <br />

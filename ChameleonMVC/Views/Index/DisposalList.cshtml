@@ -2,7 +2,9 @@
     ViewBag.Title = "DisposalList";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+@using ChameleonMVC.Controllers
+@using ChameleonMVC.Models
+@model IEnumerable<vw_DisposalList>
 @*<link href="~/assets/css/bootstrap.css" rel="stylesheet" />*@
 
 
@@ -10,145 +12,52 @@
     $(document).ready(function () {
         $("#tblDisposalList").DataTable();
     });
+
+    function Detail(button) {
+        $(document).ready(function () {
+            var trHTML = '';
+            var row = $(button).closest("TR");
+            var NoDisposalSend = $("TD", row).eq(1).html();
+            var StatusSend = $("TD", row).eq(4).html();
+            window.location.href = "CreateDisposal?NoDisposal=" + NoDisposalSend + "&Status=" + StatusSend;
+
+        });
+    }
 </script>
 
 <body class="hold-transition skin-blue sidebar-mini">
     <div class="container">
         <div id="divCAPAList">
             <h1>List Disposal</h1>
-            <div class="row" >
+            <div class="row">
                 <div class="col-md-12">
                     <table id="tblDisposalList" class="display" border="1">
                         <thead style="background-color:#156898;">
                             <tr>
                                 <th width="25px" style="color:white;">No</th>
                                 <th width="100px" style="color:white;">No Disposal</th>
-                                <th width="200px" style="color:white">Nama Barang</th>
                                 <th width="100px" style="color:white">Lokasi CAPA</th>
-                                <th width="200px" style="color:white">Alasan Lelang</th>
+                                <th width="300px" style="color:white">Alasan Lelang</th>
                                 <th width="100px" style="color:white">Status Lelang</th>
-                                <th width="100px" style="color:white">Action</th>
+                                <th width="50px" style="color:white">Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>
-                                    1
-                                </td>
-                                <td>
-                                    UP/3HA03/11/19/0001/HO
-                                </td>
-                                <td>
-                                    Laptop HP Core I5
-                                </td>
-                                <td>
-                                    Head Office
-                                </td>
-                                <td>
-                                    Sudah tidak digunakan
-                                </td>
-                                <td style="background-color:#70CB98;color:white;">
-                                    <b>Open</b>
-                                </td>
-                                <td>
-                                    <button id="btnDetail">Detail</button>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                   2
-                                </td>
-                                <td>
-                                    UP/3HA03/11/19/0002/HO
-                                </td>
-                                <td>
-                                    Printer HP Laser Jet 3310
-                                </td>
-                                <td>
-                                    Head Office
-                                </td>
-                                <td>
-                                    Sudah tidak digunakan
-                                </td>
-                                <td style="background-color:#56BACF;color:white;">
-                                    <b>Complete</b>
-                                </td>
-                                <td>
-                                    <button id="btnDetail">Detail</button>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    3
-                                </td>
-                                <td>
-                                    UP/3HA03/11/19/0003/HO
-                                </td>
-                                <td>
-                                    Monitor HP 17'
-                                </td>
-                                <td>
-                                    Head Office
-                                </td>
-                                <td>
-                                    Sudah tidak digunakan
-                                </td>
-                                <td style="background-color:#ffd700;color:black;">
-                                    <b>Waiting</b>
-                                </td>
-                                <td>
-                                    <button id="btnDetail">Detail</button>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    4
-                                </td>
-                                <td>
-                                    UP/3HA03/11/19/0004/HO
-                                </td>
-                                <td>
-                                    Handphone Transtrack
-                                </td>
-                                <td>
-                                    Head Office
-                                </td>
-                                <td>
-                                    Sudah tidak digunakan
-                                </td>
-                                <td style="background-color:#ff0000;color:white;">
-                                    <b>Cancel</b>
-                                </td>
-                                <td>
-                                    <button id="btnDetail">Detail</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    4
-                                </td>
-                                <td>
-                                    UP/3HA03/11/19/0005/HO
-                                </td>
-                                <td>
-                                    Monitor HP Omen
-                                </td>
-                                <td>
-                                    Head Office
-                                </td>
-                                <td>
-                                    Sudah tidak digunakan
-                                </td>
-                                <td style="background-color:#f55bf5;color:white;">
-                                    <b>Oracle Proses</b>
-                                </td>
-                                <td>
-                                    <button id="btnDetail">Detail</button>
-                                </td>
-                            </tr>
+                            @foreach (var obj in Model)
+                            {
+                                <tr>
+                                    <td>@obj.No</td>
+                                    <td>@obj.NoDisposal</td>
+                                    <td>@obj.Lokasi</td>
+                                    <td>@obj.AlasanLelang</td>
+                                    <td>@obj.Status</td>
+                                    <td>
+                                        <button id="btnDetail" value="Detail" onclick="Detail(this)">
+                                            <span><strong>Detail</strong></span>
+                                        </button>
+                                    </td>
+                                </tr>
+                            }
                         </tbody>
                     </table>
 

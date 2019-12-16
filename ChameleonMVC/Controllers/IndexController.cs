@@ -12,6 +12,7 @@ namespace ChameleonMVC.Controllers
 {
     public class IndexController : Controller
     {
+        LelangGAEntities1 objEntities = new LelangGAEntities1();
         //
         // GET: /Index/
 
@@ -29,14 +30,16 @@ namespace ChameleonMVC.Controllers
             return View();
         }
 
-        public ActionResult CreateDisposal()
+        public ActionResult CreateDisposal(string NoDisposal, string Status)
         {
+            ViewBag.NoDisposal = NoDisposal;
+            ViewBag.Status = Status;
             return View();
         }
 
         public ActionResult DisposalList()
         {
-            return View();
+            return View(objEntities.vw_DisposalList);
         }
 
         public ActionResult DisposalDetail()
@@ -68,6 +71,7 @@ namespace ChameleonMVC.Controllers
         {
             return View();
         }
+        
 
         public ActionResult GetLOBMasterData()
         {
@@ -177,15 +181,30 @@ namespace ChameleonMVC.Controllers
             }
             conn.Close();
 
+            List<string> ModelDataDT = new List<string>();
             List<DataRow> DataRow = new List<DataRow>();
             int n = 0;
+
             foreach (DataRow dr in dt.Rows)
             {
-                ModelData.Add(dr[0].ToString());
+                ModelDataDT.Add(dr[0].ToString());
             }
 
+            List<DataRow> objAR = dt.AsEnumerable().ToList();
 
-            return Json(ModelData);
+            System.Web.Script.Serialization.JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
+            List<Dictionary<string, object>> rows = new List<Dictionary<string, object>>();
+            Dictionary<string, object> row;
+            foreach (DataRow dr in dt.Rows)
+            {
+                row = new Dictionary<string, object>();
+                foreach (DataColumn col in dt.Columns)
+                {
+                    row.Add(col.ColumnName, dr[col]);
+                }
+                rows.Add(row);
+            }
+            return Json(rows);
         }
 
         public ActionResult GenerateDisposalNumber(GenerateDisposal Model)
@@ -229,6 +248,79 @@ namespace ChameleonMVC.Controllers
             conn.Close();
             ModelData.Add(Result);
             return Json(ModelData);
+        }
+
+        public ActionResult DeleteAsset(AssetAdd Model)
+        {
+            List<string> ModelData = new List<string>();
+
+            ConnectionStringSettings mySetting = ConfigurationManager.ConnectionStrings["LelangGA"];
+            string conString = mySetting.ConnectionString;
+            string query = "exec [dbo].[STP_CreateDisposal_Transc]";
+            string Result;
+
+            SqlConnection conn = new SqlConnection(conString);
+            SqlCommand cmd = new SqlCommand(query, conn);
+            conn.Open();
+            using (SqlCommand command = new SqlCommand("[dbo].[STP_CreateDisposal_Transc]", conn))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Add("@Option", System.Data.SqlDbType.Int);
+                command.Parameters["@Option"].Value = 4;
+
+                command.Parameters.Add("@NomorAktivaTetap", System.Data.SqlDbType.NVarChar);
+                command.Parameters["@NomorAktivaTetap"].Value = Model.NomorAktivaTetap;
+                
+                command.Parameters.Add("@NoDisposalGet", System.Data.SqlDbType.NVarChar);
+                command.Parameters["@NoDisposalGet"].Value = Model.NoDisposal;
+
+                Result = (string)command.ExecuteScalar();
+            }
+            conn.Close();
+
+            DataTable dt = new DataTable();
+            
+            conn.Open();
+            using (SqlCommand command = new SqlCommand("[dbo].[STP_CreateDisposal_Transc]", conn))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Add("@Option", System.Data.SqlDbType.Int);
+                command.Parameters["@Option"].Value = 3;
+
+                command.Parameters.Add("@NoDisposalGet", System.Data.SqlDbType.NVarChar);
+                command.Parameters["@NoDisposalGet"].Value = Model.NoDisposal;
+
+                SqlDataAdapter dataAdapt = new SqlDataAdapter();
+                dataAdapt.SelectCommand = command;
+
+                dataAdapt.Fill(dt);
+            }
+            conn.Close();
+
+            List<string> ModelDataDT = new List<string>();
+            List<DataRow> DataRow = new List<DataRow>();
+            int n = 0;
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                ModelDataDT.Add(dr[0].ToString());
+            }
+
+            List<DataRow> objAR = dt.AsEnumerable().ToList();
+
+            System.Web.Script.Serialization.JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
+            List<Dictionary<string, object>> rows = new List<Dictionary<string, object>>();
+            Dictionary<string, object> row;
+            foreach (DataRow dr in dt.Rows)
+            {
+                row = new Dictionary<string, object>();
+                foreach (DataColumn col in dt.Columns)
+                {
+                    row.Add(col.ColumnName, dr[col]);
+                }
+                rows.Add(row);
+            }
+            return Json(rows);
         }
     }
 }

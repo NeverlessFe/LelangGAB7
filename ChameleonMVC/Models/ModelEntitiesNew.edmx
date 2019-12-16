@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="LelangGAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'LelangGA.dbo.vw_DisposalList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vw_DisposalList">
+          <Key>
+            <PropertyRef Name="NoDisposal" />
+          </Key>
+          <Property Name="No" Type="bigint" />
+          <Property Name="NoDisposal" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="PIC" Type="nvarchar" MaxLength="500" />
+          <Property Name="LOB" Type="nvarchar" MaxLength="511" />
+          <Property Name="Lokasi" Type="nvarchar" MaxLength="50" />
+          <Property Name="AlasanLelang" Type="nvarchar" MaxLength="4000" />
+          <Property Name="Status" Type="varchar" MaxLength="14" />
+        </EntityType>
+        <EntityContainer Name="LelangGAModelStoreContainer">
+          <EntitySet Name="vw_DisposalList" EntityType="Self.vw_DisposalList" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[vw_DisposalList].[No] AS [No], 
+[vw_DisposalList].[NoDisposal] AS [NoDisposal], 
+[vw_DisposalList].[PIC] AS [PIC], 
+[vw_DisposalList].[LOB] AS [LOB], 
+[vw_DisposalList].[Lokasi] AS [Lokasi], 
+[vw_DisposalList].[AlasanLelang] AS [AlasanLelang], 
+[vw_DisposalList].[Status] AS [Status]
+FROM [dbo].[vw_DisposalList] AS [vw_DisposalList]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LelangGAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="vw_DisposalList">
+          <Key>
+            <PropertyRef Name="NoDisposal" />
+          </Key>
+          <Property Name="No" Type="Int64" />
+          <Property Name="NoDisposal" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PIC" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="LOB" Type="String" MaxLength="511" FixedLength="false" Unicode="true" />
+          <Property Name="Lokasi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AlasanLelang" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="LelangGAEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="vw_DisposalList" EntityType="Self.vw_DisposalList" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LelangGAModelStoreContainer" CdmEntityContainer="LelangGAEntities1">
+          <EntitySetMapping Name="vw_DisposalList">
+            <EntityTypeMapping TypeName="LelangGAModel.vw_DisposalList">
+              <MappingFragment StoreEntitySet="vw_DisposalList">
+                <ScalarProperty Name="No" ColumnName="No" />
+                <ScalarProperty Name="NoDisposal" ColumnName="NoDisposal" />
+                <ScalarProperty Name="PIC" ColumnName="PIC" />
+                <ScalarProperty Name="LOB" ColumnName="LOB" />
+                <ScalarProperty Name="Lokasi" ColumnName="Lokasi" />
+                <ScalarProperty Name="AlasanLelang" ColumnName="AlasanLelang" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

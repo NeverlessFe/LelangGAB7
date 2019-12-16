@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LelangGAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'LelangGA.dbo.vw_DisposalList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vw_DisposalList">
+    <Key>
+      <PropertyRef Name="NoDisposal" />
+    </Key>
+    <Property Name="No" Type="bigint" />
+    <Property Name="NoDisposal" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PIC" Type="nvarchar" MaxLength="500" />
+    <Property Name="LOB" Type="nvarchar" MaxLength="511" />
+    <Property Name="Lokasi" Type="nvarchar" MaxLength="50" />
+    <Property Name="AlasanLelang" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Status" Type="varchar" MaxLength="14" />
+  </EntityType>
+  <EntityContainer Name="LelangGAModelStoreContainer">
+    <EntitySet Name="vw_DisposalList" EntityType="Self.vw_DisposalList" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vw_DisposalList].[No] AS [No], 
+[vw_DisposalList].[NoDisposal] AS [NoDisposal], 
+[vw_DisposalList].[PIC] AS [PIC], 
+[vw_DisposalList].[LOB] AS [LOB], 
+[vw_DisposalList].[Lokasi] AS [Lokasi], 
+[vw_DisposalList].[AlasanLelang] AS [AlasanLelang], 
+[vw_DisposalList].[Status] AS [Status]
+FROM [dbo].[vw_DisposalList] AS [vw_DisposalList]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

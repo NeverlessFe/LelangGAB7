@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LelangGAModelStoreContainer" CdmEntityContainer="LelangGAEntities1">
+    <EntitySetMapping Name="vw_DisposalList">
+      <EntityTypeMapping TypeName="LelangGAModel.vw_DisposalList">
+        <MappingFragment StoreEntitySet="vw_DisposalList">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="NoDisposal" ColumnName="NoDisposal" />
+          <ScalarProperty Name="PIC" ColumnName="PIC" />
+          <ScalarProperty Name="LOB" ColumnName="LOB" />
+          <ScalarProperty Name="Lokasi" ColumnName="Lokasi" />
+          <ScalarProperty Name="AlasanLelang" ColumnName="AlasanLelang" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

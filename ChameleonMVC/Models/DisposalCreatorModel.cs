@@ -22,5 +22,6 @@ namespace ChameleonMVC.Models
     {
         public string AssetNumber { get; set; }
         public string NoDisposal { get; set; }
+        public string NomorAktivaTetap { get; set; }
     }
 }
