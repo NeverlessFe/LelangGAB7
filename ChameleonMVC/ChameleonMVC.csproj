@@ -2420,6 +2420,7 @@
     <Content Include="Models\ModelEntitiesNew.edmx.diagram">
       <DependentUpon>ModelEntitiesNew.edmx</DependentUpon>
     </Content>
+    <Content Include="libman.json" />
     <None Include="Properties\PublishProfiles\Lelang.pubxml" />
     <None Include="Properties\PublishProfiles\NeverlessWebHost - FTP %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\NeverlessWebHost - FTP.pubxml" />
