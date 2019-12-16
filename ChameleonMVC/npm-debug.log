@@ -1,0 +1,160 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\Web\\External\\Node.exe',
+1 verbose cli   'C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\Web\\External\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@3.3.4
+3 info using node@v5.4.1
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly fetchNamedPackageData async
+20 silly mapToRegistry name async
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/async
+24 silly fetchNamedPackageData grunt
+25 silly mapToRegistry name grunt
+26 silly mapToRegistry using default registry
+27 silly mapToRegistry registry https://registry.npmjs.org/
+28 silly mapToRegistry uri https://registry.npmjs.org/grunt
+29 silly fetchNamedPackageData grunt-cli
+30 silly mapToRegistry name grunt-cli
+31 silly mapToRegistry using default registry
+32 silly mapToRegistry registry https://registry.npmjs.org/
+33 silly mapToRegistry uri https://registry.npmjs.org/grunt-cli
+34 silly fetchNamedPackageData gulp-cli
+35 silly mapToRegistry name gulp-cli
+36 silly mapToRegistry using default registry
+37 silly mapToRegistry registry https://registry.npmjs.org/
+38 silly mapToRegistry uri https://registry.npmjs.org/gulp-cli
+39 verbose request uri https://registry.npmjs.org/async
+40 verbose request no auth needed
+41 info attempt registry request try #1 at 10:43:35 AM
+42 verbose request id 2a4bb1e92adeee83
+43 http request GET https://registry.npmjs.org/async
+44 verbose request uri https://registry.npmjs.org/grunt
+45 verbose request no auth needed
+46 info attempt registry request try #1 at 10:43:35 AM
+47 http request GET https://registry.npmjs.org/grunt
+48 verbose request uri https://registry.npmjs.org/grunt-cli
+49 verbose request no auth needed
+50 info attempt registry request try #1 at 10:43:35 AM
+51 http request GET https://registry.npmjs.org/grunt-cli
+52 verbose request uri https://registry.npmjs.org/gulp-cli
+53 verbose request no auth needed
+54 info attempt registry request try #1 at 10:43:35 AM
+55 http request GET https://registry.npmjs.org/gulp-cli
+56 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=Parse Error
+57 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=Parse Error
+58 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=Parse Error
+59 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=Parse Error
+60 info attempt registry request try #2 at 10:43:45 AM
+61 http request GET https://registry.npmjs.org/gulp-cli
+62 info attempt registry request try #2 at 10:43:45 AM
+63 http request GET https://registry.npmjs.org/async
+64 info attempt registry request try #2 at 10:43:45 AM
+65 http request GET https://registry.npmjs.org/grunt-cli
+66 info attempt registry request try #2 at 10:43:45 AM
+67 http request GET https://registry.npmjs.org/grunt
+68 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=Parse Error
+69 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=Parse Error
+70 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=Parse Error
+71 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=Parse Error
+72 info attempt registry request try #3 at 10:44:45 AM
+73 http request GET https://registry.npmjs.org/gulp-cli
+74 info attempt registry request try #3 at 10:44:45 AM
+75 http request GET https://registry.npmjs.org/grunt-cli
+76 info attempt registry request try #3 at 10:44:45 AM
+77 http request GET https://registry.npmjs.org/grunt
+78 info attempt registry request try #3 at 10:44:45 AM
+79 http request GET https://registry.npmjs.org/async
+80 silly fetchPackageMetaData Error: tunneling socket could not be established, cause=Parse Error
+80 silly fetchPackageMetaData     at ClientRequest.onError (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Web\External\node_modules\request\node_modules\tunnel-agent\index.js:176:17)
+80 silly fetchPackageMetaData     at ClientRequest.g (events.js:260:16)
+80 silly fetchPackageMetaData     at emitOne (events.js:77:13)
+80 silly fetchPackageMetaData     at ClientRequest.emit (events.js:169:7)
+80 silly fetchPackageMetaData     at Socket.socketOnData (_http_client.js:320:9)
+80 silly fetchPackageMetaData     at emitOne (events.js:77:13)
+80 silly fetchPackageMetaData     at Socket.emit (events.js:169:7)
+80 silly fetchPackageMetaData     at readableAddChunk (_stream_readable.js:146:16)
+80 silly fetchPackageMetaData     at Socket.Readable.push (_stream_readable.js:110:10)
+80 silly fetchPackageMetaData     at TCP.onread (net.js:523:20)
+80 silly fetchPackageMetaData  error for gulp-cli@^1.4.0 { [Error: tunneling socket could not be established, cause=Parse Error] code: 'ECONNRESET' }
+81 silly fetchPackageMetaData Error: tunneling socket could not be established, cause=Parse Error
+81 silly fetchPackageMetaData     at ClientRequest.onError (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Web\External\node_modules\request\node_modules\tunnel-agent\index.js:176:17)
+81 silly fetchPackageMetaData     at ClientRequest.g (events.js:260:16)
+81 silly fetchPackageMetaData     at emitOne (events.js:77:13)
+81 silly fetchPackageMetaData     at ClientRequest.emit (events.js:169:7)
+81 silly fetchPackageMetaData     at Socket.socketOnData (_http_client.js:320:9)
+81 silly fetchPackageMetaData     at emitOne (events.js:77:13)
+81 silly fetchPackageMetaData     at Socket.emit (events.js:169:7)
+81 silly fetchPackageMetaData     at readableAddChunk (_stream_readable.js:146:16)
+81 silly fetchPackageMetaData     at Socket.Readable.push (_stream_readable.js:110:10)
+81 silly fetchPackageMetaData     at TCP.onread (net.js:523:20)
+81 silly fetchPackageMetaData  error for grunt@^1.0.1 { [Error: tunneling socket could not be established, cause=Parse Error] code: 'ECONNRESET' }
+82 silly fetchPackageMetaData Error: tunneling socket could not be established, cause=Parse Error
+82 silly fetchPackageMetaData     at ClientRequest.onError (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Web\External\node_modules\request\node_modules\tunnel-agent\index.js:176:17)
+82 silly fetchPackageMetaData     at ClientRequest.g (events.js:260:16)
+82 silly fetchPackageMetaData     at emitOne (events.js:77:13)
+82 silly fetchPackageMetaData     at ClientRequest.emit (events.js:169:7)
+82 silly fetchPackageMetaData     at Socket.socketOnData (_http_client.js:320:9)
+82 silly fetchPackageMetaData     at emitOne (events.js:77:13)
+82 silly fetchPackageMetaData     at Socket.emit (events.js:169:7)
+82 silly fetchPackageMetaData     at readableAddChunk (_stream_readable.js:146:16)
+82 silly fetchPackageMetaData     at Socket.Readable.push (_stream_readable.js:110:10)
+82 silly fetchPackageMetaData     at TCP.onread (net.js:523:20)
+82 silly fetchPackageMetaData  error for grunt-cli@^1.2.0 { [Error: tunneling socket could not be established, cause=Parse Error] code: 'ECONNRESET' }
+83 silly fetchPackageMetaData Error: tunneling socket could not be established, cause=Parse Error
+83 silly fetchPackageMetaData     at ClientRequest.onError (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Web\External\node_modules\request\node_modules\tunnel-agent\index.js:176:17)
+83 silly fetchPackageMetaData     at ClientRequest.g (events.js:260:16)
+83 silly fetchPackageMetaData     at emitOne (events.js:77:13)
+83 silly fetchPackageMetaData     at ClientRequest.emit (events.js:169:7)
+83 silly fetchPackageMetaData     at Socket.socketOnData (_http_client.js:320:9)
+83 silly fetchPackageMetaData     at emitOne (events.js:77:13)
+83 silly fetchPackageMetaData     at Socket.emit (events.js:169:7)
+83 silly fetchPackageMetaData     at readableAddChunk (_stream_readable.js:146:16)
+83 silly fetchPackageMetaData     at Socket.Readable.push (_stream_readable.js:110:10)
+83 silly fetchPackageMetaData     at TCP.onread (net.js:523:20)
+83 silly fetchPackageMetaData  error for async@^2.5.0 { [Error: tunneling socket could not be established, cause=Parse Error] code: 'ECONNRESET' }
+84 silly rollbackFailedOptional Starting
+85 silly rollbackFailedOptional Finishing
+86 silly runTopLevelLifecycles Starting
+87 silly runTopLevelLifecycles Finishing
+88 silly install printInstalled
+89 verbose stack Error: tunneling socket could not be established, cause=Parse Error
+89 verbose stack     at ClientRequest.onError (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Web\External\node_modules\request\node_modules\tunnel-agent\index.js:176:17)
+89 verbose stack     at ClientRequest.g (events.js:260:16)
+89 verbose stack     at emitOne (events.js:77:13)
+89 verbose stack     at ClientRequest.emit (events.js:169:7)
+89 verbose stack     at Socket.socketOnData (_http_client.js:320:9)
+89 verbose stack     at emitOne (events.js:77:13)
+89 verbose stack     at Socket.emit (events.js:169:7)
+89 verbose stack     at readableAddChunk (_stream_readable.js:146:16)
+89 verbose stack     at Socket.Readable.push (_stream_readable.js:110:10)
+89 verbose stack     at TCP.onread (net.js:523:20)
+90 verbose cwd C:\Users\ignatius.kurniawan\Source\Repos\LelangGAB7\ChameleonMVC
+91 error Windows_NT 10.0.18362
+92 error argv "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\Web\\External\\Node.exe" "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\Web\\External\\node_modules\\npm\\bin\\npm-cli.js" "install"
+93 error node v5.4.1
+94 error npm  v3.3.4
+95 error code ECONNRESET
+96 error network tunneling socket could not be established, cause=Parse Error
+96 error network This is most likely not a problem with npm itself
+96 error network and is related to network connectivity.
+96 error network In most cases you are behind a proxy or have bad network settings.
+96 error network
+96 error network If you are behind a proxy, please make sure that the
+96 error network 'proxy' config is set properly.  See: 'npm help config'
+97 verbose exit [ 1, true ]
